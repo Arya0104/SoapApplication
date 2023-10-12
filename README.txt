@@ -5,3 +5,11 @@ Set up SoapApplication with MVC
 Click run application button
 Gives Welcome page
 Added Controller named HelloWorldController.cs
+Tested the controller and gives This is my default action....
+
+2240
+tested the welcome message 
+it gives the welcome action method...
+
+2244
+shown the name and numtimes ,it ran

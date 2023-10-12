@@ -7,16 +7,17 @@ namespace MvcMovie.Controllers
     {
         // getting our HelloWorld
 
-        public string Index()
+        public IActionResult Index()
         {
-            return "This is my default action...";
+            return View();
         }
 
-       // getting Welcome
+        // getting Welcome
 
-        public string Welcome()
+        //getting the numeric values
+        public string Welcome(string name, int ID)
         {
-            return "This is the Welcome action method...";
+            return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");
         }
     }
 }
