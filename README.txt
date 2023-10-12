@@ -13,3 +13,13 @@ it gives the welcome action method...
 
 2244
 shown the name and numtimes ,it ran
+
+2248
+added the view and it says "Hello from view template!"
+
+2250
+there is a footer now in the bottom of the page of the copyright statement
+
+2320
+having a welcome page when i ran the name and numtimes
+so all good till now.
