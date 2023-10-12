@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using SoapApplication.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<SoapApplicationContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SoapApplicationContext")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

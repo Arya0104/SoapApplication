@@ -23,3 +23,14 @@ there is a footer now in the bottom of the page of the copyright statement
 2320
 having a welcome page when i ran the name and numtimes
 so all good till now.
+
+2328
+adding the model
+and the NuGet packages as well
+also, ran the commands
+
+2336
+finally, the scaffolding tool created and it ran thankfully.
+
+2351
+after eamining the codes, was able to CRUD on the page.
