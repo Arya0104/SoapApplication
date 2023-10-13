@@ -34,3 +34,7 @@ finally, the scaffolding tool created and it ran thankfully.
 
 2351
 after eamining the codes, was able to CRUD on the page.
+
+2023-10-12
+2300
+starting with the next parts
