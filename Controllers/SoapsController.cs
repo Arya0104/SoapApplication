@@ -20,11 +20,17 @@ namespace SoapApplication.Controllers
         }
 
         // GET: Soaps
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-              return _context.Soap != null ? 
-                          View(await _context.Soap.ToListAsync()) :
-                          Problem("Entity set 'SoapApplicationContext.Soap'  is null.");
+            var movies = from s in _context.Soap
+                         select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(s => s.Name!.Contains(searchString));
+            }
+
+            return View(await movies.ToListAsync());
         }
 
         // GET: Soaps/Details/5
