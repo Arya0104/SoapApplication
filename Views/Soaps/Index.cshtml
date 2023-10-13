@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MvcSoaps.Models.Soap>
+﻿@model SoapApplication.Models.SoapFragranceViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -9,29 +9,38 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<form asp-controller="Soaps" asp-action="Index">
+    <p>
+        <select asp-for="SoapFragrance" asp-items="Model.Fragrances">
+            <option value="">All</option>
+        </select>
+        Title: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.Soaps[0].Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Ingridients)
+                @Html.DisplayNameFor(model => model.Soaps[0].Ingridients)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Fragrance)
+                @Html.DisplayNameFor(model => model.Soaps[0].Fragrance)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.Soaps[0].Price)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SkinType)
+                @Html.DisplayNameFor(model => model.Soaps[0].SkinType)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.Soaps) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)

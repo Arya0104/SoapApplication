@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MvcSoaps.Models;
 using SoapApplication.Data;
+using SoapApplication.Models;
 
 namespace SoapApplication.Controllers
 {
@@ -20,19 +21,34 @@ namespace SoapApplication.Controllers
         }
 
         // GET: Soaps
-        public async Task<IActionResult> Index(string searchString)
+        
+        public async Task<IActionResult> Index(string soapFragrance, string searchString)
         {
-            var movies = from s in _context.Soap
+            // Use LINQ to get list of genres.
+            IQueryable<string> fragranceQuery = from s in _context.Soap
+                                            orderby s.Fragrance
+                                            select s.Fragrance;
+            var soaps = from s in _context.Soap
                          select s;
 
-            if (!String.IsNullOrEmpty(searchString))
+            if (!string.IsNullOrEmpty(searchString))
             {
-                movies = movies.Where(s => s.Name!.Contains(searchString));
+                soaps = soaps.Where(s => s.Name!.Contains(searchString));
             }
 
-            return View(await movies.ToListAsync());
-        }
+            if (!string.IsNullOrEmpty(soapFragrance))
+            {
+                soaps = soaps.Where(x => x.Fragrance == soapFragrance);
+            }
 
+            var soapFragranceVM = new SoapFragranceViewModel
+            {
+                Fragrances = new SelectList(await fragranceQuery.Distinct().ToListAsync()),
+                Soaps = await soaps.ToListAsync()
+            };
+
+            return View(soapFragranceVM);
+        }
         // GET: Soaps/Details/5
         public async Task<IActionResult> Details(int? id)
         {
