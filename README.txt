@@ -33,7 +33,7 @@ also, ran the commands
 finally, the scaffolding tool created and it ran thankfully.
 
 2351
-after eamining the codes, was able to CRUD on the page.
+after eamining the codes, was able to Create, delete on the page.
 
 2023-10-12
 2300
@@ -42,4 +42,24 @@ starting with the next parts
 2328
 I had an error in the part 5 when i was seeding the DB, I had the error message shown in the index page as it would not open.
 i removed the seeding anmd carefully reviewed the code there were few errors within the calling mehodes which i was successfully able to solve and the oage ran.
-er
+
+2334
+it runs and shows the seed data.
+
+2347
+was able to use the edit page through Edit.cshtml
+
+2359
+it was the  time for search button and by updating the index method in the controllers.
+
+
+2023-10-13
+0105
+successfully able to search the specific item by its name.
+
+1138
+new day working on the project, it was the time for adding another search by a attribute , i chose fragrance.
+
+1141
+added the mew class in the Models and updated the index method in the  controller
+
