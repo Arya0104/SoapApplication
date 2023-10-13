@@ -17,7 +17,7 @@ namespace MvcSoap.Models
             {
                 if (context.Soap.Any())
                 {
-                    return;   // DB has been seeded
+                    return;   //database seeded
                 }
 
                 context.Soap.AddRange(

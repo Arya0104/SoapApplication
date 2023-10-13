@@ -58,8 +58,22 @@ it was the  time for search button and by updating the index method in the contr
 successfully able to search the specific item by its name.
 
 1138
-new day working on the project, it was the time for adding another search by a attribute , i chose fragrance.
+new day working on the project, it is the time for adding another search by a attribute , i chose fragrance.
 
 1141
-added the mew class in the Models and updated the index method in the  controller
+added the new class in the Models and updated the index method in the  controller
+it runs. it shows the selectlist.
 
+1202
+adding a rating property in the field there is an issue int he rating field. when changing the rating in the web it shows an message that it has to be between 1 and 5, i tried adding 3 in still shows the message.
+tried to resolve this issue but because of the lack of time i am continueing the project to the next steps and at the end i can solve the issue with it
+
+1414
+starting with the About us page which is added on the  application with a introduction of the company and trying to add an image which i can not figure out but the CSS has been implemented.
+
+1327
+on here, I created a image folder in my repository and dragged and dropped it in the folder so now it shows the images thankfully.
+
+1652
+Going to upload and submit now.
+Thank you
