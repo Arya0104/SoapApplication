@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SoapApplication.Data;
 
@@ -10,9 +11,11 @@ using SoapApplication.Data;
 namespace SoapApplication.Migrations
 {
     [DbContext(typeof(SoapApplicationContext))]
-    partial class SoapApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20231013175246_Rating")]
+    partial class Rating
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

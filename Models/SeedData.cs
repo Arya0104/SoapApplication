@@ -27,7 +27,8 @@ namespace MvcSoap.Models
                         Ingridients = "Seasme",
                         Fragrance = "Musk",
                         SkinType = "Dry",
-                        Price = 45
+                        Price = 45,
+                        Rating = 3
                     },
 
                     new Soap
@@ -36,7 +37,8 @@ namespace MvcSoap.Models
                         Ingridients = "Seasme",
                         Fragrance = "Musk",
                         SkinType = "Dry",
-                        Price = 45
+                        Price = 45,
+                        Rating = 4
                     },
 
                     new Soap
@@ -45,7 +47,8 @@ namespace MvcSoap.Models
                         Ingridients = "Seasme",
                         Fragrance = "Musk",
                         SkinType = "Dry",
-                        Price = 45
+                        Price = 45,
+                        Rating = 2
                     },
 
                     new Soap
@@ -54,7 +57,9 @@ namespace MvcSoap.Models
                         Ingridients = "Seasme",
                         Fragrance = "Musk",
                         SkinType = "Dry",
-                        Price = 45
+                        Price = 45,
+                        Rating = 1
+
                     }
                 );
                 context.SaveChanges();

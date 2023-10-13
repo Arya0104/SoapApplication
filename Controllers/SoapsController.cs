@@ -78,7 +78,7 @@ namespace SoapApplication.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Ingridients,Fragrance,Price,SkinType")] Soap soap)
+        public async Task<IActionResult> Create([Bind("Id,Name,Ingridients,Fragrance,Price,SkinType,Rating")] Soap soap)
         {
             if (ModelState.IsValid)
             {
