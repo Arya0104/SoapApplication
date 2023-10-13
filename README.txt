@@ -38,3 +38,8 @@ after eamining the codes, was able to CRUD on the page.
 2023-10-12
 2300
 starting with the next parts
+
+2328
+I had an error in the part 5 when i was seeding the DB, I had the error message shown in the index page as it would not open.
+i removed the seeding anmd carefully reviewed the code there were few errors within the calling mehodes which i was successfully able to solve and the oage ran.
+er

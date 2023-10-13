@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Runtime.CompilerServices;
 
 namespace MvcSoaps.Models
 {
@@ -19,8 +18,9 @@ namespace MvcSoaps.Models
 
         public string? SkinType { get; set; }
 
-        [Range(1, 5, ErrorMessage = "Rating must be between 1 and 5 ")]
-        
+        [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$")]
+        [StringLength(5)]
+        [Required]
         public double Rating { get; set; }
     }
 }
